@@ -1,0 +1,82 @@
+.header{
+  color: white;
+  padding: 50px 0 0 0 !important;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.deleteBtn {
+  font-size: 27px;
+  color: #ff7e88;
+  cursor: pointer;
+}
+.editBtn {
+  font-size: 27px;
+  color: #7781e2;
+  cursor: pointer;
+}
+.doneBtn {
+  font-size: 27px;
+  color: #83e279;
+  cursor: pointer;
+}
+.undoBtn {
+  font-size: 27px;
+  color: #e2d066;
+  cursor: pointer;
+}
+.saveBtn {
+  font-size: 27px;
+  color: #256f0b;
+  cursor: pointer;
+}
+.cancelBtn {
+  font-size: 27px;
+  color: #cb8952;
+  cursor: pointer;
+}
+.tasks {
+  list-style: none;
+}
+
+.sidebar {
+  height: auto;
+}
+.content {
+  height: 100%;
+}
+
+.selectedSideBar {
+  transform: scale(1.4);
+  font-weight: bolder;
+  color: white !important;
+}
+.ATDoneBtn {
+  color: #83e279 !important;
+  transform: scale(1.3);
+}
+.ATEditBtn {
+  color: #5d5de2 !important;
+  transform: scale(1.3);
+}
+.ATDeleteBtn {
+  color: #e2625d !important;
+  transform: scale(1.3);
+}
+.activeButton {
+  background-color: #5d5de2 !important;
+  color: white !important;
+  border: 1px solid #5d5de2 !important ;
+}
+.notActiveButton {
+  background-color: white !important;
+  color: #5d5de2 !important;
+  border: 1px solid #5d5de2 !important ;
+}
