@@ -10,9 +10,10 @@ class AddTodo extends Component {
     todos: [],
     inputValue: "",
     filter: "All",
-    date: null
-  };
-  id = 1;
+    date: null,
+    id : 1
+
+};
   setFilter = filterName => {
     this.setState({
       filter: filterName
@@ -21,8 +22,11 @@ class AddTodo extends Component {
   componentDidMount() {
     axios.get("http://localhost:9000/Todos").then(res => {
       this.setState(prev => {
+        let lastId = res.data.map(i=>i.id)
+        let maxId = Math.max(...lastId)
         return {
-          todos: res.data
+          todos: res.data,
+          id:maxId+1
         };
       });
     });
@@ -44,11 +48,11 @@ class AddTodo extends Component {
       return {
         todos: [
           ...prevState.todos,
-          { name: taskName, done: false, id: this.id++ }
+          { name: taskName, done: false, id: this.state.id++ }
         ]
       };
     });
-    console.log(this.state.todos);
+    console.log('name:',taskName,'id:',this.state.id);
   };
 
   delete = (index, id) => {
@@ -56,7 +60,8 @@ class AddTodo extends Component {
     axios.delete(`http://localhost:9000/Todos/${id}`);
     this.setState(prevState => {
       return {
-        todos: [...prevState.todos.filter(i => i.id !== id)]
+        todos: [...prevState.todos.filter(i => i.id !== id)],
+        id:prevState.id-1
       };
     });
   };
