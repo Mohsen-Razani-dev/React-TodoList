@@ -1,4 +1,4 @@
-# TODO List with Local Server
+# TODO List with Locally Json Server
 
 #### Installation & Running locally
 
